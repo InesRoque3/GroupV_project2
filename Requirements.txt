@@ -1,0 +1,9 @@
+dash
+dash_core_components
+dash_html_components
+dash_daq
+dash_bootstrap_components
+numpy
+pandas
+plotly.graph_objs
+plotly.express
