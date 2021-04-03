@@ -77,7 +77,7 @@ slider_map = daq.Slider(
 fig_water = px.sunburst(water, path=['Origin', 'Category', 'Product'], values='Water Used', color='Category', 
                         color_discrete_sequence = px.colors.sequential.haline_r).update_traces(hovertemplate = '%{label}<br>' + 'Water Used: %{value} L')
 
-fig_water = fig_water.update_layout({'margin' : dict(t=0, l=0, r=0, b=0),
+fig_water = fig_water.update_layout({'margin' : dict(t=0, l=0, r=0, b=10),
                         'paper_bgcolor': '#F9F9F8',
                         'font_color':'#363535'
                     })
@@ -85,7 +85,7 @@ fig_water = fig_water.update_layout({'margin' : dict(t=0, l=0, r=0, b=0),
 fig_gemissions = px.sunburst(global_emissions, path = ['Emissions', 'Group','Subgroup'], values = 'Percentage of food emissions', 
                     color = 'Group', color_discrete_sequence = px.colors.sequential.Peach_r).update_traces(hovertemplate = '%{label}<br>' + 'Global Emissions: %{value}%', textinfo = "label + percent entry") 
 
-fig_gemissions = fig_gemissions.update_layout({'margin' : dict(t=0, l=0, r=0, b=0),
+fig_gemissions = fig_gemissions.update_layout({'margin' : dict(t=0, l=0, r=0, b=10),
                         'paper_bgcolor': '#F9F9F8',
                         'font_color':'#363535'})
 
