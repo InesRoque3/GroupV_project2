@@ -9,10 +9,12 @@ import pandas as pd
 import plotly.graph_objs as go
 import plotly.express as px
 
-emissions = pd.read_csv("data/emissions_with_origin.csv")
-productions = pd.read_csv("data/productions.csv")
-water = pd.read_csv("data/water_use.csv")
-global_emissions = pd.read_csv("data/Global_Emissions.csv")
+path = 'https://raw.githubusercontent.com/InesRoque3/GroupV_project2/main/data/'
+
+emissions = pd.read_csv(path + "emissions_with_origin.csv")
+productions = pd.read_csv(path + "productions.csv")
+water = pd.read_csv(path + "water_use.csv")
+global_emissions = pd.read_csv(path + "Global_Emissions.csv")
 
 top10 = emissions.sort_values("Total_emissions")[-10:]
 top10_vegetal = emissions[emissions.Origin=='Vegetal'].sort_values("Total_emissions")[-10:]
