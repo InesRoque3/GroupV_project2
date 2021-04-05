@@ -108,9 +108,11 @@ app.layout = html.Div([
     html.Div([
         html.Div([
             html.Div([
-                html.Label('Choose One:'), 
+                html.Label("Choose the Product's Origin:"), 
+                html.Br(),
+                html.Br(),
                 radio_ani_veg
-            ], style={'margin': '10px'}),
+            ], className='box', style={'margin': '10px', 'padding-top':'15px', 'padding-bottom':'15px'}),
 
             html.Div([
                 html.Div([
@@ -214,12 +216,16 @@ app.layout = html.Div([
             html.Div([
                 html.Div([
                     html.Label("3. Global greenhouse gas emissions from food production, in percentage", style={'font-size': 'medium'}),
+                    html.Br(),
+                    html.Label('Click on it to know more!', style={'font-size':'9px'}),
                     html.Br(), 
                     html.Br(), 
                     dcc.Graph(figure=fig_gemissions)
                 ], className='box', style={'width': '40%'}), 
                 html.Div([
                     html.Label("4. Freshwater withdrawals per kg of product, in Liters", style={'font-size': 'medium'}),
+                    html.Br(),
+                    html.Label('Click on it to know more!', style={'font-size':'9px'}),
                     html.Br(), 
                     html.Br(), 
                     dcc.Graph(figure=fig_water)
